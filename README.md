@@ -59,7 +59,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [vim-rooter](https://github.com/airblade/vim-rooter.git)
 * [vim-snippets](https://github.com/honza/vim-snippets.git)
 * [vim-surround](https://github.com/tpope/vim-surround.git)
-* \+[wmgraphviz.vim](https://github.com/wannesm/wmgraphviz.vim)
+* [wmgraphviz.vim](https://github.com/wannesm/wmgraphviz.vim)
 * [xmledit](https://github.com/sukima/xmledit.git)
 
 ## Attention ##
@@ -73,6 +73,8 @@ I don't have this so just download the code pack.
 
 Commands can't run in windows because of tee and a bug of shellescape.
 With some changes I do it now can used normally under windows.
+I commit pull request to [wannesm](https://github.com/wannesm) and he just merged it into repo,
+so actually there is no edit in the plugin.
 
 ### [vim-latex](https://github.com/vim-latex/vim-latex.git) ###
 
