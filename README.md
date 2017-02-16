@@ -54,6 +54,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [vim-javacomplete2](https://github.com/artur-shaik/vim-javacomplete2.git)
 * [vim-javascript](https://github.com/pangloss/vim-javascript.git)
 * \+[vim-latex](https://github.com/vim-latex/vim-latex.git)
+* [vim-markdown](https://github.com/plasticboy/vim-markdown.git)
 * [vim-misc](https://github.com/xolox/vim-misc.git)
 * [vim-nodejs-complete](https://github.com/myhere/vim-nodejs-complete.git)
 * [vim-polyglot](https://github.com/sheerun/vim-polyglot.git)

@@ -638,3 +638,8 @@ let g:rooter_targets = '*.yml,*.yaml'
 
 " directories and yaml files
 let g:rooter_targets = '/,*.yml,*.yaml'
+
+" vim-markdown
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_math = 1
+let g:vim_markdown_no_extensions_in_markdown = 1
