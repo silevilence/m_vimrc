@@ -21,6 +21,8 @@ maybe sort by name after(may forget to sort after add a plugin).
 
 \* means the plugin are not installed by git.
 
+\! means the plugin need to read 'how to install' first.
+
 * [asyncrun.vim](https://github.com/skywind3000/asyncrun.vim.git)
 * \*[authorinfo](https://github.com/dantezhu/authorinfo.git)
 * [bufferhint](https://github.com/bsdelf/bufferhint.git)
@@ -29,14 +31,14 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 * [dict.vim](https://github.com/iamcco/dict.vim.git)
 * [FastFold](https://github.com/Konfekt/FastFold.git)
-* [jshint.vim](https://github.com/walm/jshint.vim.git)
+* \![jshint.vim](https://github.com/walm/jshint.vim.git)
 * [lua.vim](https://github.com/vim-scripts/lua.vim.git)
 * [lushtags](https://github.com/bitc/lushtags.git)
 * [neco-ghc](https://github.com/eagletmt/neco-ghc)
-* [neocomplete.vim](https://github.com/Shougo/neocomplete.vim.git)
+* \![neocomplete.vim](https://github.com/Shougo/neocomplete.vim.git)
 * [nerdcommenter](https://github.com/scrooloose/nerdcommenter.git)
 * [nerdtree](https://github.com/scrooloose/nerdtree.git)
-* [omnisharp-vim](https://github.com/OmniSharp/omnisharp-vim.git)
+* \![omnisharp-vim](https://github.com/OmniSharp/omnisharp-vim.git)
 * [pydiction](https://github.com/rkulla/pydiction.git)
 * [rainbow](https://github.com/luochen1990/rainbow.git)
 * [sessionman.vim](https://github.com/vim-scripts/sessionman.vim.git)
