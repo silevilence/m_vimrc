@@ -74,7 +74,7 @@ set incsearch		" do incremental searching
 " let &guioptions = substitute(&guioptions, "t", "", "g")
 
 " Don't use Ex mode, use Q for formatting
-map Q gq
+noremap Q gq
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
@@ -262,17 +262,17 @@ autocmd filetype c,cpp,java setl fdm=syntax | setl fen
 let g:vimrc_author='Silevilence' 
 let g:vimrc_email='silevilence@outlook.com' 
 let g:vimrc_homepage='http://localhost:8080' 
-nmap <Leader>info :AuthorInfoDetect<cr> 
+nnoremap <Leader>info :AuthorInfoDetect<cr> 
 
 " tagbar
-nmap tt :TagbarToggle<CR>
+nnoremap tt :TagbarToggle<CR>
 let g:tagbar_ctags_bin='ctags.exe'
 let g:tagbar_width=40
 autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
 "let g:tagbar_left = 1 "������
 
 "NERDTree
-nmap <Leader>nt :NERDTreeToggle<CR>
+nnoremap <Leader>nt :NERDTreeToggle<CR>
 
 " vim-airline
 set laststatus=2
@@ -284,20 +284,20 @@ let g:airline#extensions#tagbar#flags = 'f'
 let g:airline#extensions#ctrlp#show_adjacent_modes = 1
 
 "CtrlP
-"nmap cp :CtrlP
+"nnoremap cp :CtrlP
 
 "vim-polyglot
 let g:polyglot_disabled = []
 " 修正latex-suite和latex-box键位冲突
 let g:LatexBox_no_mappings=1
-"autocmd filetype tex nmap <LocalLeader>lc :LatexmkClean<CR>
-"autocmd filetype tex nmap <LocalLeader>lC :LatexmkClean!<CR>
-"autocmd filetype tex nmap <LocalLeader>lk :LatexmkStop<CR>
-"autocmd filetype tex nmap <LocalLeader>lg :LatexmkStatus<CR>
-"autocmd filetype tex nmap <LocalLeader>lG :LatexmkStatus!<CR>
-"autocmd filetype tex nmap <LocalLeader>le :LatexErrors<CR>
-autocmd filetype tex nmap <LocalLeader>lt :LatexTOC<CR>
-autocmd filetype tex nmap <LocalLeader>lj :LatexLabels<CR>
+"autocmd filetype tex nnoremap <LocalLeader>lc :LatexmkClean<CR>
+"autocmd filetype tex nnoremap <LocalLeader>lC :LatexmkClean!<CR>
+"autocmd filetype tex nnoremap <LocalLeader>lk :LatexmkStop<CR>
+"autocmd filetype tex nnoremap <LocalLeader>lg :LatexmkStatus<CR>
+"autocmd filetype tex nnoremap <LocalLeader>lG :LatexmkStatus!<CR>
+"autocmd filetype tex nnoremap <LocalLeader>le :LatexErrors<CR>
+autocmd filetype tex nnoremap <LocalLeader>lt :LatexTOC<CR>
+autocmd filetype tex nnoremap <LocalLeader>lj :LatexLabels<CR>
 
 "Haskell
 let g:haskell_enable_quantification       = 1  " ����Haskell���� forall
