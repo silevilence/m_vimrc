@@ -92,3 +92,5 @@ for example,
 if use Gstatus,
 sometimes E484(can't open file),
 sometimes a empty file(.git/index err).
+Seems all plugin use Temp file has this bug,
+maybe some errors in vim itself.
