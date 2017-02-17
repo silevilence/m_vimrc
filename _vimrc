@@ -42,6 +42,11 @@ let maplocalleader = ","
 
 " quickly open vimrc file
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" map H and L in normal mode
+nnoremap H 0
+nnoremap L $
 
 " An example for a vimrc file.
 "
