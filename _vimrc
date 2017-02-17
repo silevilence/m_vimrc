@@ -202,9 +202,6 @@ unmap <C-Y>
 iunmap <C-A>
 iunmap <C-Y>
 
-"auto add content
-autocmd BufNewFile *.html 0 r $VIM/Template/html
-
 "python
 let g:pydiction_location= '$VIM\vimfiles\bundle\Pydiction\complete-dict'
 let g:pydiction_menu_height=20
@@ -249,9 +246,12 @@ function! AddTexFold()
 	call IMAP('EFE', "\\begin{frame}\<CR><++>\<CR>\\end{frame}<++>", 'tex')
     endif
 endfunction
-"au filetype tex let g:Tex_FoldedEnvironments = 'frame,'.g:Tex_FoldedEnvironments
-"au BufRead,BufNewFile *.tex let g:Tex_FoldedEnvironments = 'frame,'.g:Tex_FoldedEnvironments
-autocmd BufRead,BufNewFile *.tex call AddTexFold()
+augroup Tex
+    au!
+    "au filetype tex let g:Tex_FoldedEnvironments = 'frame,'.g:Tex_FoldedEnvironments
+    "au BufRead,BufNewFile *.tex let g:Tex_FoldedEnvironments = 'frame,'.g:Tex_FoldedEnvironments
+    autocmd BufRead,BufNewFile *.tex call AddTexFold()
+augroup END
 "let g:Tex_FoldedEnvironments = 'frame,'.g:Tex_FoldedEnvironments
 
 " used to avoid latex-suite crash gvim
@@ -280,10 +280,9 @@ function! QfMakeConv()
    endfor
    call setqflist(qflist)
 endfunction
-au QuickfixCmdPost make call QfMakeConv()
-
-"����
-autocmd filetype c,cpp,java setl fdm=syntax | setl fen
+augroup quickfix_fix
+    au QuickfixCmdPost make call QfMakeConv()
+augroup END
 
 " authorinfo plugin
 let g:vimrc_author='Silevilence' 
@@ -295,7 +294,7 @@ nnoremap <Leader>info :AuthorInfoDetect<cr>
 nnoremap tt :TagbarToggle<CR>
 let g:tagbar_ctags_bin='ctags.exe'
 let g:tagbar_width=40
-autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
+" autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
 "let g:tagbar_left = 1 "������
 
 "NERDTree
@@ -317,14 +316,17 @@ let g:airline#extensions#ctrlp#show_adjacent_modes = 1
 let g:polyglot_disabled = []
 " 修正latex-suite和latex-box键位冲突
 let g:LatexBox_no_mappings=1
-"autocmd filetype tex nnoremap <LocalLeader>lc :LatexmkClean<CR>
-"autocmd filetype tex nnoremap <LocalLeader>lC :LatexmkClean!<CR>
-"autocmd filetype tex nnoremap <LocalLeader>lk :LatexmkStop<CR>
-"autocmd filetype tex nnoremap <LocalLeader>lg :LatexmkStatus<CR>
-"autocmd filetype tex nnoremap <LocalLeader>lG :LatexmkStatus!<CR>
-"autocmd filetype tex nnoremap <LocalLeader>le :LatexErrors<CR>
-autocmd filetype tex nnoremap <LocalLeader>lt :LatexTOC<CR>
-autocmd filetype tex nnoremap <LocalLeader>lj :LatexLabels<CR>
+augroup LatexBox
+    au!
+    "autocmd filetype tex nnoremap <LocalLeader>lc :LatexmkClean<CR>
+    "autocmd filetype tex nnoremap <LocalLeader>lC :LatexmkClean!<CR>
+    "autocmd filetype tex nnoremap <LocalLeader>lk :LatexmkStop<CR>
+    "autocmd filetype tex nnoremap <LocalLeader>lg :LatexmkStatus<CR>
+    "autocmd filetype tex nnoremap <LocalLeader>lG :LatexmkStatus!<CR>
+    "autocmd filetype tex nnoremap <LocalLeader>le :LatexErrors<CR>
+    autocmd filetype tex nnoremap <LocalLeader>lt :LatexTOC<CR>
+    autocmd filetype tex nnoremap <LocalLeader>lj :LatexLabels<CR>
+augroup END
 
 "Haskell
 let g:haskell_enable_quantification       = 1  " ����Haskell���� forall
@@ -336,8 +338,10 @@ let g:haskell_enable_static_pointers      = 1  " ����Haskell����
 let hs_allow_hash_operator = 1
 " Disable haskell-vim omnifunc
 let g:haskellmode_completion_ghc = 0
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-autocmd filetype haskell set ts=4 | set expandtab
+augroup filetype_haskell
+    autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+    autocmd filetype haskell set ts=4 | set expandtab
+augroup END
 
 let hs_highlight_delimiters = 1
 let hs_highlight_boolean = 1
@@ -401,11 +405,14 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 "inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
 
 " Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+augroup ft_omnifunc
+    au!
+    autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+    autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+    autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+augroup END
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
@@ -420,13 +427,17 @@ endif
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 " lua settings
-autocmd filetype lua set ts=4 | set expandtab
-autocmd filetype lua source $VIM/love.vim
+augroup filetype_lua
+    autocmd filetype lua set ts=4 | set expandtab
+    autocmd filetype lua source $VIM/love.vim
+augroup END
 let g:lua_complete_omni = 1
 
 " xmledit
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags noci
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags noci
+augroup xmledit_omni
+    autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags noci
+    autocmd FileType html set omnifunc=htmlcomplete#CompleteTags noci
+augroup END
 
 " FastFold
 let g:fastfold_savehook = 0
@@ -438,9 +449,11 @@ let g:WMGraphviz_doc2texoptions = '-tmath --figonly'
 if has('win32')
     let g:WMGraphviz_shelloptions="-Gfontname=SimSun -Nfontname=SimSun -Efontname=SimSun"
 endif
+"augroup filetype_dot
 "au filetype dot,gv set makeprg=dot\ -tpng\ -gfontname=simsun\ -nfontname=simsun\ -efontname=simsun\ -o\ %:p:.:r.png\ %
 "au filetype dot,gv set efm=Error:\ %f:\ syntax\ error\ in\ line\ %l\ %m
 "au filetype dot,gv nnoremap <F5> :! start %:p:.:r.png<CR>
+"augroup END
 
 "Unity自动补全
 "let s:extfname = expand("%:e")
