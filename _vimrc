@@ -35,6 +35,14 @@ set nu!
 syntax enable 
 syntax on 
 set sessionoptions-=options
+
+" map leader
+let mapleader = ","
+let maplocalleader = ","
+
+" quickly open vimrc file
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
 " An example for a vimrc file.
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
