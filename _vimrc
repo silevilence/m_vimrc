@@ -4,7 +4,7 @@ source $VIMRUNTIME/mswin.vim
 behave mswin
 
 set diffexpr=MyDiff()
-function MyDiff()
+function! MyDiff()
   let opt = '-a --binary '
   if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
   if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
@@ -227,7 +227,7 @@ let g:Tex_UseMakefile = 0
 let g:Tex_MultipleCompileFormats = 'dvi,pdf'
 
 "fold
-function AddTexFold()
+function! AddTexFold()
     if !exists('g:TexFoldAdded')
 	"echo "Run."
 	let g:TexFoldAdded = 1
@@ -259,7 +259,7 @@ source $VIMRUNTIME/menu.vim
 language messages zh_CN.utf-8
 
 "quickfix ����
-function QfMakeConv()
+function! QfMakeConv()
    let qflist = getqflist()
    for i in qflist
       let i.text = iconv(i.text, "cp936", "utf-8")
