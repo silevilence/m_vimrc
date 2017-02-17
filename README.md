@@ -50,7 +50,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes.git)
 * [vim-airline](https://github.com/vim-airline/vim-airline.git)
 * [vim-csharp](https://github.com/OrangeT/vim-csharp.git)
-* [vim-dispatch](https://github.com/tpope/vim-dispatch)
+* [vim-fugitive](https://github.com/tpope/vim-fugitive.git)
 * [vim-javacomplete2](https://github.com/artur-shaik/vim-javacomplete2.git)
 * [vim-javascript](https://github.com/pangloss/vim-javascript.git)
 * \+[vim-latex](https://github.com/vim-latex/vim-latex.git)
@@ -84,3 +84,11 @@ so actually there is no edit in the plugin.
 All changes have been moved to vimrc file.
 So no change in code,
 just some templates I used.
+
+### [vim-fugitive](https://github.com/tpope/vim-fugitive.git) ###
+
+With unknown reason it can't works.
+for example,
+if use Gstatus,
+sometimes E484(can't open file),
+sometimes a empty file(.git/index err).
