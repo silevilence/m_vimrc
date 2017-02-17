@@ -26,7 +26,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [asyncrun.vim](https://github.com/skywind3000/asyncrun.vim.git)
 * \*[authorinfo](https://github.com/dantezhu/authorinfo.git)
 * [bufferhint](https://github.com/bsdelf/bufferhint.git)
-* [c-support](https://github.com/WolfgangMehner/c-support.git)
+* [clang-complete](https://github.com/Rip-Rip/clang_complete.git)
 * \*[csExplorer](https://github.com/scwbin/csExplorer)
 * [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 * [dict.vim](https://github.com/iamcco/dict.vim.git)
@@ -40,7 +40,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [nerdtree](https://github.com/scrooloose/nerdtree.git)
 * \![omnisharp-vim](https://github.com/OmniSharp/omnisharp-vim.git)
 * [pydiction](https://github.com/rkulla/pydiction.git)
-* [rainbow](https://github.com/luochen1990/rainbow.git)
+* \![rainbow](https://github.com/luochen1990/rainbow.git)
 * [sessionman.vim](https://github.com/vim-scripts/sessionman.vim.git)
 * \*[sw-samuraj-vim-gradle](https://bitbucket.org/sw-samuraj/vim-gradle)
 * [syntastic](https://github.com/vim-syntastic/syntastic.git)
@@ -94,3 +94,8 @@ sometimes E484(can't open file),
 sometimes a empty file(.git/index err).
 Seems all plugin use Temp file has this bug,
 maybe some errors in vim itself.
+
+### [clang-complete](https://github.com/Rip-Rip/clang_complete.git) ###
+
+Need to install clang fisrt and set a var to clang lib path.
+

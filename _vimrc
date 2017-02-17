@@ -666,3 +666,10 @@ let g:rooter_targets = '/,*.yml,*.yaml'
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_math = 1
 let g:vim_markdown_no_extensions_in_markdown = 1
+
+" clang-complete
+" path to directory where library can be found
+"let g:clang_library_path='/usr/lib/llvm-3.8/lib'
+let g:clang_library_path='D:\Program Files\LLVM\lib'
+" or path directly to the library file
+"let g:clang_library_path='/usr/lib64/libclang.so.3.8'
