@@ -281,7 +281,9 @@ function! QfMakeConv()
    call setqflist(qflist)
 endfunction
 augroup quickfix_fix
+    au!
     au QuickfixCmdPost make call QfMakeConv()
+    "au QuickfixCmdPost * call QfMakeConv()
 augroup END
 
 " authorinfo plugin
@@ -635,12 +637,17 @@ let g:rainbow_conf = {
 
 " asyncrun
 let g:airline_section_error = airline#section#create_right(['%{g:asyncrun_status}'])
-augroup QuickfixStatus
-    au! BufWinEnter quickfix setlocal 
-        \ statusline=%t\ [%{g:asyncrun_status}]\ %{exists('w:quickfix_title')?\ '\ '.w:quickfix_title\ :\ ''}\ %=%-15(%l,%c%V%)\ %P
-augroup END
 " coop with vim-fugitive
 command! -bang -nargs=* -complete=file Make AsyncRun -program=make @ <args>
+" encoding
+let g:asyncrun_encs = 'gbk'
+
+augroup asyncrun
+    au!
+    au! BufWinEnter quickfix setlocal 
+        \ statusline=%t\ [%{g:asyncrun_status}]\ %{exists('w:quickfix_title')?\ '\ '.w:quickfix_title\ :\ ''}\ %=%-15(%l,%c%V%)\ %P
+    autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
+augroup END
 
 " vim-rooter
 " directories and all files (default)
