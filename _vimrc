@@ -74,6 +74,9 @@ vnoremap <down> <nop>
 vnoremap <left> <nop>
 vnoremap <right> <nop>
 
+" useful maps
+nnoremap / /\v
+
 " An example for a vimrc file.
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>

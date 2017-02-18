@@ -12,7 +12,7 @@ This is just a backup.
 
 ## Plugins List ##
 
-**Update Time:** 2017-02-17
+**Update Time:** 2017-02-18
 
 *note:* Sort by name in initial commit,
 maybe sort by name after(may forget to sort after add a plugin).
@@ -50,6 +50,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes.git)
 * [vim-airline](https://github.com/vim-airline/vim-airline.git)
 * [vim-csharp](https://github.com/OrangeT/vim-csharp.git)
+* [vim-easygrep](https://github.com/dkprice/vim-easygrep.git)
 * [vim-fugitive](https://github.com/tpope/vim-fugitive.git)
 * [vim-javacomplete2](https://github.com/artur-shaik/vim-javacomplete2.git)
 * [vim-javascript](https://github.com/pangloss/vim-javascript.git)
