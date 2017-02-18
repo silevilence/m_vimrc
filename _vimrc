@@ -45,6 +45,7 @@ set sessionoptions-=options
 augroup filetype_vim
     au!
     au FileType vim setlocal foldmethod=marker
+    au FileType vim set foldlevelstart=0
 augroup END
 
 " map leader
