@@ -538,6 +538,29 @@ augroup omnisharp_commands
     "navigate down by method/property/field
     autocmd FileType cs nnoremap <C-J> :OmniSharpNavigateDown<cr>
 
+    " Contextual code actions (requires CtrlP or unite.vim)
+    autocmd FileType cs nnoremap <leader><space> :OmniSharpGetCodeActions<cr>
+    " Run code actions with text selected in visual mode to extract method
+    autocmd FileType cs vnoremap <leader><space> :call OmniSharp#GetCodeActions('visual')<cr>
+
+    " rename with dialog
+    autocmd FileType cs nnoremap <leader>nm :OmniSharpRename<cr>
+    autocmd FileType cs nnoremap <F2> :OmniSharpRename<cr>
+    " rename without dialog - with cursor on the symbol to rename... ':Rename newname'
+    autocmd FileType cs command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
+
+    " Force OmniSharp to reload the solution. Useful when switching branches etc.
+    autocmd FileType cs nnoremap <leader>rl :OmniSharpReloadSolution<cr>
+    autocmd FileType cs nnoremap <leader>cf :OmniSharpCodeFormat<cr>
+    " Load the current .cs file to the nearest project
+    autocmd FileType cs nnoremap <leader>tp :OmniSharpAddToProject<cr>
+
+    " (Experimental - uses vim-dispatch or vimproc plugin) - Start the omnisharp server for the current solution
+    autocmd FileType cs nnoremap <leader>ss :OmniSharpStartServer<cr>
+    autocmd FileType cs nnoremap <leader>sp :OmniSharpStopServer<cr>
+
+    " Add syntax highlighting for types and interfaces
+    autocmd FileType cs nnoremap <leader>th :OmniSharpHighlightTypes<cr>
 augroup END
 
 
@@ -546,29 +569,6 @@ augroup END
 " Remove 'Press Enter to continue' message when type information is longer than one line.
 "set cmdheight=2
 
-" Contextual code actions (requires CtrlP or unite.vim)
-nnoremap <leader><space> :OmniSharpGetCodeActions<cr>
-" Run code actions with text selected in visual mode to extract method
-vnoremap <leader><space> :call OmniSharp#GetCodeActions('visual')<cr>
-
-" rename with dialog
-nnoremap <leader>nm :OmniSharpRename<cr>
-nnoremap <F2> :OmniSharpRename<cr>
-" rename without dialog - with cursor on the symbol to rename... ':Rename newname'
-command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
-
-" Force OmniSharp to reload the solution. Useful when switching branches etc.
-nnoremap <leader>rl :OmniSharpReloadSolution<cr>
-nnoremap <leader>cf :OmniSharpCodeFormat<cr>
-" Load the current .cs file to the nearest project
-nnoremap <leader>tp :OmniSharpAddToProject<cr>
-
-" (Experimental - uses vim-dispatch or vimproc plugin) - Start the omnisharp server for the current solution
-nnoremap <leader>ss :OmniSharpStartServer<cr>
-nnoremap <leader>sp :OmniSharpStopServer<cr>
-
-" Add syntax highlighting for types and interfaces
-nnoremap <leader>th :OmniSharpHighlightTypes<cr>
 "Don't ask to save when changing buffers (i.e. when jumping to a type definition)
 set hidden
 
