@@ -92,10 +92,11 @@ for example,
 if use Gstatus,
 sometimes E484(can't open file),
 sometimes a empty file(.git/index err).
-Seems all plugin use Temp file has this bug,
+Seems all plugin use Temp file([vim-javacomplete2](https://github.com/artur-shaik/vim-javacomplete2.git)) has this bug,
 maybe some errors in vim itself.
 
 ### [clang-complete](https://github.com/Rip-Rip/clang_complete.git) ###
 
 Need to install clang fisrt and set a var to clang lib path.
+Not test because didn't write cpp for a long time.
 

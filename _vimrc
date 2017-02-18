@@ -1,3 +1,4 @@
+" Basic settings 1 {{{
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
@@ -27,14 +28,24 @@ function! MyDiff()
   endif
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
+" }}}
 
+" pathogen settings {{{
 "call pathogen#infect()
 execute pathogen#infect()
+" }}}
+
+" Basic settings 2 {{{
 set sw=4
 set nu! 
 syntax enable 
 syntax on 
 set sessionoptions-=options
+
+augroup filetype_vim
+    au!
+    au FileType vim setlocal foldmethod=marker
+augroup END
 
 " map leader
 let mapleader = ","
@@ -202,14 +213,36 @@ unmap <C-Y>
 iunmap <C-A>
 iunmap <C-Y>
 
-"python
+" encoding
+set encoding=utf-8
+set fileencodings=utf-8,gbk,gb18030,gk2312
+" source
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+" message setting
+language messages zh_CN.utf-8
+
+"quickfix 
+function! QfMakeConv()
+   let qflist = getqflist()
+   for i in qflist
+      let i.text = iconv(i.text, "cp936", "utf-8")
+   endfor
+   call setqflist(qflist)
+endfunction
+augroup quickfix_fix
+    au!
+    au QuickfixCmdPost make call QfMakeConv()
+    "au QuickfixCmdPost * call QfMakeConv()
+augroup END
+" }}}
+
+" python {{{
 let g:pydiction_location= '$VIM\vimfiles\bundle\Pydiction\complete-dict'
 let g:pydiction_menu_height=20
-"autocmd filetype py map <F10> :!python %<cr>
-"java
-"autocmd filetype java map <F10> :!javac -d . %<cr>
+" }}}
 
-"latex-suite
+" vim-latex {{{
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
 filetype plugin on
 
@@ -259,50 +292,28 @@ let g:Tex_UsePython = 0
 
 " open alt key map
 let g:Tex_AdvancedMath = 1
+" }}}
 
-"minibufferexplorer
-"let g:miniBufExplorerMoreThanOne=0
-
-" ���뼰��������
-set encoding=utf-8
-set fileencodings=utf-8,gbk,gb18030,gk2312
-"�����˵�����
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
-"����consle��������
-language messages zh_CN.utf-8
-
-"quickfix ����
-function! QfMakeConv()
-   let qflist = getqflist()
-   for i in qflist
-      let i.text = iconv(i.text, "cp936", "utf-8")
-   endfor
-   call setqflist(qflist)
-endfunction
-augroup quickfix_fix
-    au!
-    au QuickfixCmdPost make call QfMakeConv()
-    "au QuickfixCmdPost * call QfMakeConv()
-augroup END
-
-" authorinfo plugin
+" authorinfo plugin {{{
 let g:vimrc_author='Silevilence' 
 let g:vimrc_email='silevilence@outlook.com' 
 let g:vimrc_homepage='http://localhost:8080' 
 nnoremap <Leader>info :AuthorInfoDetect<cr> 
+" }}}
 
-" tagbar
+" tagbar {{{
 nnoremap tt :TagbarToggle<CR>
 let g:tagbar_ctags_bin='ctags.exe'
 let g:tagbar_width=40
 " autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
-"let g:tagbar_left = 1 "������
+" let g:tagbar_left = 1 " move tagbar window to left
+" }}}
 
-"NERDTree
+" NERDTree {{{
 nnoremap <Leader>nt :NERDTreeToggle<CR>
+" }}}
 
-" vim-airline
+" vim-airline {{{
 set laststatus=2
 let g:airline_powerline_fonts=1
 let g:airline_theme='badwolf'
@@ -310,11 +321,13 @@ let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#tagbar#flags = 'f'
 let g:airline#extensions#ctrlp#show_adjacent_modes = 1
+" }}}
 
-"CtrlP
+" CtrlP {{{
 "nnoremap cp :CtrlP
+" }}}
 
-"vim-polyglot
+" vim-polyglot {{{
 let g:polyglot_disabled = []
 " 修正latex-suite和latex-box键位冲突
 let g:LatexBox_no_mappings=1
@@ -329,8 +342,9 @@ augroup LatexBox
     autocmd filetype tex nnoremap <LocalLeader>lt :LatexTOC<CR>
     autocmd filetype tex nnoremap <LocalLeader>lj :LatexLabels<CR>
 augroup END
+" }}}
 
-"Haskell
+" Haskell {{{
 let g:haskell_enable_quantification       = 1  " ����Haskell���� forall
 let g:haskell_enable_recursivedo          = 1  " ����Haskell���� mdo and rec
 let g:haskell_enable_arrowsyntax          = 1  " ����Haskell���� proc
@@ -351,8 +365,9 @@ let hs_highlight_types = 1
 let hs_highlight_more_types = 1
 let hs_highlight_debug = 1
 let hs_allow_hash_operator = 1
+" }}}
 
-" neocomplete
+" neocomplete {{{
 "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -427,24 +442,28 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+" }}}
 
-" lua settings
+" lua settings {{{
 augroup filetype_lua
     autocmd filetype lua set ts=4 | set expandtab
     autocmd filetype lua source $VIM/love.vim
 augroup END
 let g:lua_complete_omni = 1
+" }}}
 
-" xmledit
+" xmledit {{{
 augroup xmledit_omni
     autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags noci
     autocmd FileType html set omnifunc=htmlcomplete#CompleteTags noci
 augroup END
+" }}}
 
-" FastFold
+" FastFold {{{
 let g:fastfold_savehook = 0
+" }}}
 
-" wmgraphviz
+" wmgraphviz {{{
 let g:WMGraphviz_output = "png"
 let g:WMGraphviz_viewer = " start"
 let g:WMGraphviz_doc2texoptions = '-tmath --figonly'
@@ -456,14 +475,9 @@ endif
 "au filetype dot,gv set efm=Error:\ %f:\ syntax\ error\ in\ line\ %l\ %m
 "au filetype dot,gv nnoremap <F5> :! start %:p:.:r.png<CR>
 "augroup END
+" }}}
 
-"Unity自动补全
-"let s:extfname = expand("%:e")
-"if s:extfname ==?"cs"
-    "set dictionary+=$VIM\dict\UnityCS.txt
-    "set complete+=k
-"endif
-
+" OmniSharp {{{
 "This is the default value, setting it isn't actually necessary
 let g:OmniSharp_host = "http://localhost:2000"
 
@@ -576,7 +590,10 @@ set hidden
 set completeopt-=preview
 let g:OmniSharp_want_snippet=1
 
-" syntastic settings
+let g:OmniSharp_selector_ui = 'ctrlp'  " Use ctrlp.vim
+" }}}
+
+" syntastic settings {{{
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -586,8 +603,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ignore_files = ['\m\c\.tex$', '\m\c\.hs$']
+" }}}
 
-" ultisnips
+" ultisnips {{{
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 "let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsExpandTrigger="<c-k>"
@@ -599,18 +617,19 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Requires this when using Neocomplete because of a compatibility issue with UltiSnips.
 set completeopt-=preview
+" }}}
 
-let g:OmniSharp_selector_ui = 'ctrlp'  " Use ctrlp.vim
-
-" javacomplete2
+" javacomplete2 {{{
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
+" }}}
 
-" bufferhint
+" bufferhint {{{
 nnoremap <LocalLeader>bt :call bufferhint#Popup()<CR>
 nnoremap <LocalLeader>bp :call bufferhint#LoadPrevious()<CR>
 let g:bufferhint_KeepWindow = 1
+" }}}
 
-" rainbow
+" rainbow {{{
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 let g:rainbow_conf = {
 	    \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
@@ -634,8 +653,9 @@ let g:rainbow_conf = {
 	    \       'css': 0,
 	    \   }
 	    \}
+" }}}
 
-" asyncrun
+" asyncrun {{{
 let g:airline_section_error = airline#section#create_right(['%{g:asyncrun_status}'])
 " coop with vim-fugitive
 command! -bang -nargs=* -complete=file Make AsyncRun -program=make @ <args>
@@ -648,8 +668,9 @@ augroup asyncrun
         \ statusline=%t\ [%{g:asyncrun_status}]\ %{exists('w:quickfix_title')?\ '\ '.w:quickfix_title\ :\ ''}\ %=%-15(%l,%c%V%)\ %P
     autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
 augroup END
+" }}}
 
-" vim-rooter
+" vim-rooter {{{
 " directories and all files (default)
 let g:rooter_targets = '/,*'
 
@@ -661,15 +682,18 @@ let g:rooter_targets = '*.yml,*.yaml'
 
 " directories and yaml files
 let g:rooter_targets = '/,*.yml,*.yaml'
+" }}}
 
-" vim-markdown
+" vim-markdown {{{
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_math = 1
 let g:vim_markdown_no_extensions_in_markdown = 1
+" }}}
 
-" clang-complete
+" clang-complete {{{
 " path to directory where library can be found
 "let g:clang_library_path='/usr/lib/llvm-3.8/lib'
 let g:clang_library_path='D:\Program Files\LLVM\lib'
 " or path directly to the library file
 "let g:clang_library_path='/usr/lib64/libclang.so.3.8'
+" }}}
