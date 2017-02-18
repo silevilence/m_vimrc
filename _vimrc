@@ -43,9 +43,9 @@ syntax on
 set sessionoptions-=options
 
 augroup filetype_vim
-    au!
-    au FileType vim setlocal foldmethod=marker
-    au FileType vim set foldlevelstart=0
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+    autocmd FileType vim set foldlevelstart=0
 augroup END
 
 " map leader
@@ -142,20 +142,20 @@ if has("autocmd")
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
-  au!
+      autocmd!
 
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
+      " For all text files set 'textwidth' to 78 characters.
+      autocmd FileType text setlocal textwidth=78
 
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  " Also don't do it when the mark is in the first line, that is the default
-  " position when opening a file.
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
+      " When editing a file, always jump to the last known cursor position.
+      " Don't do it when the position is invalid or when inside an event handler
+      " (happens when dropping a file on gvim).
+      " Also don't do it when the mark is in the first line, that is the default
+      " position when opening a file.
+      autocmd BufReadPost *
+		  \ if line("'\"") > 1 && line("'\"") <= line("$") |
+		  \   exe "normal! g`\"" |
+		  \ endif
 
   augroup END
 
@@ -180,7 +180,7 @@ endif
 ":set go-=L
 ":set go-=r
 " ����ʱ�Զ����󻯴���
-au GUIEnter * simalt ~x
+autocmd GUIEnter * simalt ~x
 set guioptions+=c        " ʹ���ַ���ʾ��
 set guioptions-=m        " ���ز˵���
 set guioptions-=T        " ���ع�����
@@ -232,9 +232,9 @@ function! QfMakeConv()
    call setqflist(qflist)
 endfunction
 augroup quickfix_fix
-    au!
-    au QuickfixCmdPost make call QfMakeConv()
-    "au QuickfixCmdPost * call QfMakeConv()
+    autocmd!
+    autocmd QuickfixCmdPost make call QfMakeConv()
+    "autocmd QuickfixCmdPost * call QfMakeConv()
 augroup END
 " }}}
 
@@ -281,9 +281,9 @@ function! AddTexFold()
     endif
 endfunction
 augroup Tex
-    au!
-    "au filetype tex let g:Tex_FoldedEnvironments = 'frame,'.g:Tex_FoldedEnvironments
-    "au BufRead,BufNewFile *.tex let g:Tex_FoldedEnvironments = 'frame,'.g:Tex_FoldedEnvironments
+    autocmd!
+    "autocmd filetype tex let g:Tex_FoldedEnvironments = 'frame,'.g:Tex_FoldedEnvironments
+    "autocmd BufRead,BufNewFile *.tex let g:Tex_FoldedEnvironments = 'frame,'.g:Tex_FoldedEnvironments
     autocmd BufRead,BufNewFile *.tex call AddTexFold()
 augroup END
 "let g:Tex_FoldedEnvironments = 'frame,'.g:Tex_FoldedEnvironments
@@ -333,7 +333,7 @@ let g:polyglot_disabled = []
 " 修正latex-suite和latex-box键位冲突
 let g:LatexBox_no_mappings=1
 augroup LatexBox
-    au!
+    autocmd!
     "autocmd filetype tex nnoremap <LocalLeader>lc :LatexmkClean<CR>
     "autocmd filetype tex nnoremap <LocalLeader>lC :LatexmkClean!<CR>
     "autocmd filetype tex nnoremap <LocalLeader>lk :LatexmkStop<CR>
@@ -424,7 +424,7 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 
 " Enable omni completion.
 augroup ft_omnifunc
-    au!
+    autocmd!
     autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
     autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
     autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
@@ -472,9 +472,9 @@ if has('win32')
     let g:WMGraphviz_shelloptions="-Gfontname=SimSun -Nfontname=SimSun -Efontname=SimSun"
 endif
 "augroup filetype_dot
-"au filetype dot,gv set makeprg=dot\ -tpng\ -gfontname=simsun\ -nfontname=simsun\ -efontname=simsun\ -o\ %:p:.:r.png\ %
-"au filetype dot,gv set efm=Error:\ %f:\ syntax\ error\ in\ line\ %l\ %m
-"au filetype dot,gv nnoremap <F5> :! start %:p:.:r.png<CR>
+"autocmd filetype dot,gv set makeprg=dot\ -tpng\ -gfontname=simsun\ -nfontname=simsun\ -efontname=simsun\ -o\ %:p:.:r.png\ %
+"autocmd filetype dot,gv set efm=Error:\ %f:\ syntax\ error\ in\ line\ %l\ %m
+"autocmd filetype dot,gv nnoremap <F5> :! start %:p:.:r.png<CR>
 "augroup END
 " }}}
 
@@ -664,8 +664,8 @@ command! -bang -nargs=* -complete=file Make AsyncRun -program=make @ <args>
 let g:asyncrun_encs = 'gbk'
 
 augroup asyncrun
-    au!
-    au! BufWinEnter quickfix setlocal 
+    autocmd!
+    autocmd! BufWinEnter quickfix setlocal 
         \ statusline=%t\ [%{g:asyncrun_status}]\ %{exists('w:quickfix_title')?\ '\ '.w:quickfix_title\ :\ ''}\ %=%-15(%l,%c%V%)\ %P
     autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
 augroup END
