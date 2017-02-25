@@ -12,7 +12,7 @@ This is just a backup.
 
 ## Plugins List ##
 
-**Update Time:** 2017-02-18
+**Update Time:** 2017-02-25
 
 *note:* Sort by name in initial commit,
 maybe sort by name after(may forget to sort after add a plugin).
@@ -65,6 +65,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [vim-surround](https://github.com/tpope/vim-surround.git)
 * [wmgraphviz.vim](https://github.com/wannesm/wmgraphviz.vim)
 * [xmledit](https://github.com/sukima/xmledit.git)
+* [ShaderHightLight](http://git.oschina.net/qiuchangjie/ShaderHighLight)
 
 ## Attention ##
 
