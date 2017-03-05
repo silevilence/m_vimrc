@@ -12,7 +12,7 @@ This is just a backup.
 
 ## Plugins List ##
 
-**Update Time:** 2017-02-25
+**Update Time:** 2017-03-05
 
 *note:* Sort by name in initial commit,
 maybe sort by name after(may forget to sort after add a plugin).
@@ -28,6 +28,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [bufferhint](https://github.com/bsdelf/bufferhint.git)
 * [clang-complete](https://github.com/Rip-Rip/clang_complete.git)
 * \*[csExplorer](https://github.com/scwbin/csExplorer)
+* [csv.vim](https://github.com/chrisbra/csv.vim.git)
 * [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 * [dict.vim](https://github.com/iamcco/dict.vim.git)
 * [FastFold](https://github.com/Konfekt/FastFold.git)
@@ -42,6 +43,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [pydiction](https://github.com/rkulla/pydiction.git)
 * \![rainbow](https://github.com/luochen1990/rainbow.git)
 * [sessionman.vim](https://github.com/vim-scripts/sessionman.vim.git)
+* [ShaderHightLight](http://git.oschina.net/qiuchangjie/ShaderHighLight)
 * \*[sw-samuraj-vim-gradle](https://bitbucket.org/sw-samuraj/vim-gradle)
 * [syntastic](https://github.com/vim-syntastic/syntastic.git)
 * [tabular](https://github.com/godlygeek/tabular.git)
@@ -65,7 +67,6 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [vim-surround](https://github.com/tpope/vim-surround.git)
 * [wmgraphviz.vim](https://github.com/wannesm/wmgraphviz.vim)
 * [xmledit](https://github.com/sukima/xmledit.git)
-* [ShaderHightLight](http://git.oschina.net/qiuchangjie/ShaderHighLight)
 
 ## Attention ##
 
