@@ -77,6 +77,9 @@ vnoremap <right> <nop>
 " useful maps
 nnoremap / /\v
 
+" fix e484 while wanna create a temp file
+let $TMP = 'F:/Temp'
+
 " An example for a vimrc file.
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
