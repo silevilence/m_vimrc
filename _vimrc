@@ -701,3 +701,8 @@ let g:clang_library_path='D:\Program Files\LLVM\lib'
 " or path directly to the library file
 "let g:clang_library_path='/usr/lib64/libclang.so.3.8'
 " }}}
+
+" calendar.vim
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
+nnoremap <leader>cal :Calendar

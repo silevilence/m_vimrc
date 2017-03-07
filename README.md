@@ -12,7 +12,7 @@ This is just a backup.
 
 ## Plugins List ##
 
-**Update Time:** 2017-03-05
+**Update Time:** 2017-03-07
 
 *note:* Sort by name in initial commit,
 maybe sort by name after(may forget to sort after add a plugin).
@@ -26,6 +26,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [asyncrun.vim](https://github.com/skywind3000/asyncrun.vim.git)
 * \*[authorinfo](https://github.com/dantezhu/authorinfo.git)
 * [bufferhint](https://github.com/bsdelf/bufferhint.git)
+* [calendar.vim](https://github.com/itchyny/calendar.vim)
 * [clang-complete](https://github.com/Rip-Rip/clang_complete.git)
 * \*[csExplorer](https://github.com/scwbin/csExplorer)
 * [csv.vim](https://github.com/chrisbra/csv.vim.git)
@@ -65,6 +66,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [vim-rooter](https://github.com/airblade/vim-rooter.git)
 * [vim-snippets](https://github.com/honza/vim-snippets.git)
 * [vim-surround](https://github.com/tpope/vim-surround.git)
+* [vimwiki](https://github.com/vimwiki/vimwiki.git)
 * [wmgraphviz.vim](https://github.com/wannesm/wmgraphviz.vim)
 * [xmledit](https://github.com/sukima/xmledit.git)
 
