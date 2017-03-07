@@ -714,3 +714,7 @@ let g:vimwiki_list = [{'path': 'D:/vimwiki/',
 \ 'path_html': 'D:/vimwiki/html/',
 \ 'html_header': 'D:/vimwiki/template/header.tpl',}]
 " }}}
+
+" csv.vim {{{
+let g:csv_comment = '#'
+" }}}
