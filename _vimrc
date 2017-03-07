@@ -702,7 +702,15 @@ let g:clang_library_path='D:\Program Files\LLVM\lib'
 "let g:clang_library_path='/usr/lib64/libclang.so.3.8'
 " }}}
 
-" calendar.vim
+" calendar.vim {{{
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 nnoremap <leader>cal :Calendar
+" }}}
+
+" vimwiki {{{
+let g:vimwiki_use_mouse = 1
+let g:vimwiki_list = [{'path': 'D:/vimwiki/',
+\ 'path_html': 'D:/vimwiki/html/',
+\ 'html_header': 'D:/vimwiki/template/header.tpl',}]
+" }}}
