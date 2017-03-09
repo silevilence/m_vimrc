@@ -721,3 +721,13 @@ let g:vimwiki_list = [{'path': 'D:/vimwiki/',
 " csv.vim {{{
 let g:csv_comment = '#'
 " }}}
+
+" easygrep {{{
+let g:EasyGrepMode = 0     " All:0, Open Buffers:1, TrackExt:2 
+let g:EasyGrepCommand = 1  " Use vimgrep:0, grepprg:1
+let g:EasyGrepRecursive = 1 " Recursive searching
+let g:EasyGrepIgnoreCase = 0 " not ignorecase
+let g:EasyGrepFilesToExclude = "*.bak, *~, cscope.*, *.a, *.o, *.pyc, *.bak, *.swp, *.svn, *.git"
+let g:EasyGrepReplaceWindowMode = 2
+let g:EasyGrepJumpToMatch = 0
+" }}}
