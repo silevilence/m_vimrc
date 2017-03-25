@@ -734,4 +734,7 @@ let g:EasyGrepJumpToMatch = 0
 
 " EditorConfig {{{
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+"let g:EditorConfig_core_mode = 'external_command'
+let g:EditorConfig_exec_path = 'D:\Program Files\Chocolatey\bin'
+let g:EditorConfig_python_files_dir = 'D:\Program Files (x86)\Vim\vimfiles\bundle\editorconfig-vim\plugin\editorconfig-core-py'
 " }}}
