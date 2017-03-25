@@ -12,7 +12,7 @@ This is just a backup.
 
 ## Plugins List ##
 
-**Update Time:** 2017-03-07
+**Update Time:** 2017-03-25
 
 *note:* Sort by name in initial commit,
 maybe sort by name after(may forget to sort after add a plugin).
@@ -32,6 +32,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [csv.vim](https://github.com/chrisbra/csv.vim.git)
 * [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 * [dict.vim](https://github.com/iamcco/dict.vim.git)
+* [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim.git)
 * [FastFold](https://github.com/Konfekt/FastFold.git)
 * \![jshint.vim](https://github.com/walm/jshint.vim.git)
 * [lua.vim](https://github.com/vim-scripts/lua.vim.git)

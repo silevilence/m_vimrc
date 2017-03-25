@@ -731,3 +731,7 @@ let g:EasyGrepFilesToExclude = "*.bak, *~, cscope.*, *.a, *.o, *.pyc, *.bak, *.s
 let g:EasyGrepReplaceWindowMode = 2
 let g:EasyGrepJumpToMatch = 0
 " }}}
+
+" EditorConfig {{{
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+" }}}
