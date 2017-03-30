@@ -716,6 +716,15 @@ let g:vimwiki_use_mouse = 1
 let g:vimwiki_list = [{'path': 'D:/vimwiki/',
 \ 'path_html': 'D:/vimwiki/html/',
 \ 'html_header': 'D:/vimwiki/template/header.tpl',}]
+let g:tagbar_type_vimwiki = {
+          \   'ctagstype':'vimwiki'
+          \ , 'kinds':['h:header']
+          \ , 'sro':'&&&'
+          \ , 'kind2scope':{'h':'header'}
+          \ , 'sort':0
+          \ , 'ctagsbin': 'vwtags.py'
+          \ , 'ctagsargs': 'default'
+          \ }
 " }}}
 
 " csv.vim {{{
