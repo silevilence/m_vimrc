@@ -725,6 +725,10 @@ let g:tagbar_type_vimwiki = {
           \ , 'ctagsbin': 'vwtags.py'
           \ , 'ctagsargs': 'default'
           \ }
+augroup ft_vimwiki
+    autocmd!
+    autocmd FileType vimwiki nnoremap <Leader>wha :VimwikiAll2HTML<cr>
+augroup end
 " }}}
 
 " csv.vim {{{
