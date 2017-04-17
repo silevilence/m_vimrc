@@ -37,9 +37,9 @@ execute pathogen#infect()
 
 " Basic settings 2 {{{
 set sw=4
-set nu! 
-syntax enable 
-syntax on 
+set nu!
+syntax enable
+syntax on
 set sessionoptions-=options
 
 augroup filetype_vim
@@ -229,7 +229,7 @@ source $VIMRUNTIME/menu.vim
 " message setting
 language messages zh_CN.utf-8
 
-"quickfix 
+"quickfix
 function! QfMakeConv()
    let qflist = getqflist()
    for i in qflist
@@ -302,10 +302,10 @@ let g:Tex_AdvancedMath = 1
 " }}}
 
 " authorinfo plugin {{{
-let g:vimrc_author='Silevilence' 
-let g:vimrc_email='silevilence@outlook.com' 
-let g:vimrc_homepage='http://localhost:8080' 
-nnoremap <Leader>info :AuthorInfoDetect<cr> 
+let g:vimrc_author='Silevilence'
+let g:vimrc_email='silevilence@outlook.com'
+let g:vimrc_homepage='http://localhost:8080'
+nnoremap <Leader>info :AuthorInfoDetect<cr>
 " }}}
 
 " tagbar {{{
@@ -671,7 +671,7 @@ let g:asyncrun_encs = 'gbk'
 
 augroup asyncrun
     autocmd!
-    autocmd! BufWinEnter quickfix setlocal 
+    autocmd! BufWinEnter quickfix setlocal
         \ statusline=%t\ [%{g:asyncrun_status}]\ %{exists('w:quickfix_title')?\ '\ '.w:quickfix_title\ :\ ''}\ %=%-15(%l,%c%V%)\ %P
     autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
 augroup END
@@ -728,6 +728,7 @@ let g:tagbar_type_vimwiki = {
 augroup ft_vimwiki
     autocmd!
     autocmd FileType vimwiki nnoremap <Leader>wha :VimwikiAll2HTML<cr>
+    autocmd FileType vimwiki set expandtab
 augroup end
 " }}}
 
@@ -736,7 +737,7 @@ let g:csv_comment = '#'
 " }}}
 
 " easygrep {{{
-let g:EasyGrepMode = 0     " All:0, Open Buffers:1, TrackExt:2 
+let g:EasyGrepMode = 0     " All:0, Open Buffers:1, TrackExt:2
 let g:EasyGrepCommand = 1  " Use vimgrep:0, grepprg:1
 let g:EasyGrepRecursive = 1 " Recursive searching
 let g:EasyGrepIgnoreCase = 0 " not ignorecase
