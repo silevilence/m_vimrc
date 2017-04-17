@@ -12,7 +12,7 @@ This is just a backup.
 
 ## Plugins List ##
 
-**Update Time:** 2017-03-25
+**Update Time:** 2017-04-17
 
 *note:* Sort by name in initial commit,
 maybe sort by name after(may forget to sort after add a plugin).
@@ -50,6 +50,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [syntastic](https://github.com/vim-syntastic/syntastic.git)
 * [tabular](https://github.com/godlygeek/tabular.git)
 * [tagbar](https://github.com/majutsushi/tagbar.git)
+* [TaskList](https://github.com/vim-scripts/TaskList.vim)
 * [ultisnips](https://github.com/SirVer/ultisnips)
 * [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes.git)
 * [vim-airline](https://github.com/vim-airline/vim-airline.git)
