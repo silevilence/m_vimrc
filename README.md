@@ -41,7 +41,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * \![neocomplete.vim](https://github.com/Shougo/neocomplete.vim)
 * [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
 * [nerdtree](https://github.com/scrooloose/nerdtree)
-* \![omnisharp-vim](https://github.com/OmniSharp/omnisharp-vim)
+* \!\+[omnisharp-vim](https://github.com/OmniSharp/omnisharp-vim)
 * [pydiction](https://github.com/rkulla/pydiction)
 * \![rainbow](https://github.com/luochen1990/rainbow)
 * [sessionman.vim](https://github.com/vim-scripts/sessionman.vim)
@@ -55,7 +55,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
 * [vim-airline](https://github.com/vim-airline/vim-airline)
 * [vim-csharp](https://github.com/OrangeT/vim-csharp)
-* [vim-dispatch](https://github.com/tpope/vim-dispatch)
+* ~~[vim-dispatch](https://github.com/tpope/vim-dispatch)~~
 * [vim-easygrep](https://github.com/dkprice/vim-easygrep)
 * [vim-fugitive](https://github.com/tpope/vim-fugitive)
 * ~~[vim-javacomplete2](https://github.com/artur-shaik/vim-javacomplete2)~~
@@ -108,3 +108,15 @@ maybe some errors in vim itself.
 Need to install clang fisrt and set a var to clang lib path.
 Not test because didn't write cpp for a long time.
 
+### [omnisharp-vim](https://github.com/OmniSharp/omnisharp-vim) ###
+
+As I use AsyncRun instead of vim-dispatch, add some lines to 'autoload/OmniSharp.vim' to support start server function.
+It run async command with vim-dispatch by checking 'Dispatch' command but call dispatch#start() directly,
+this just lead to that I can't just add a new command 'Dispatch' linked to AsyncRun to solve the problem.
+
+Add these codes after line 551, in function 'OmniSharp#RunAsyncCommand'.
+
+```vim
+  elseif exists(':AsyncRun') == 2
+      exec 'noautocmd AsyncRun ' . a:command
+```
