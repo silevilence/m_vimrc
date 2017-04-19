@@ -598,6 +598,7 @@ set completeopt-=preview
 let g:OmniSharp_want_snippet=1
 
 let g:OmniSharp_selector_ui = 'ctrlp'  " Use ctrlp.vim
+let g:Omnisharp_start_server=0
 " }}}
 
 " syntastic settings {{{
