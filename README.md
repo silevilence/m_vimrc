@@ -12,7 +12,7 @@ This is just a backup.
 
 ## Plugins List ##
 
-**Update Time:** 2017-04-17
+**Update Time:** 2017-04-19
 
 *note:* Sort by name in initial commit,
 maybe sort by name after(may forget to sort after add a plugin).
@@ -23,54 +23,55 @@ maybe sort by name after(may forget to sort after add a plugin).
 
 \! means the plugin need to read 'how to install' first.
 
-* [asyncrun.vim](https://github.com/skywind3000/asyncrun.vim.git)
-* \*[authorinfo](https://github.com/dantezhu/authorinfo.git)
-* [bufferhint](https://github.com/bsdelf/bufferhint.git)
+* [asyncrun.vim](https://github.com/skywind3000/asyncrun.vim)
+* \*[authorinfo](https://github.com/dantezhu/authorinfo)
+* [bufferhint](https://github.com/bsdelf/bufferhint)
 * [calendar.vim](https://github.com/itchyny/calendar.vim)
-* [clang-complete](https://github.com/Rip-Rip/clang_complete.git)
+* [clang-complete](https://github.com/Rip-Rip/clang_complete)
 * \*[csExplorer](https://github.com/scwbin/csExplorer)
-* [csv.vim](https://github.com/chrisbra/csv.vim.git)
+* [csv.vim](https://github.com/chrisbra/csv.vim)
 * [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
-* [dict.vim](https://github.com/iamcco/dict.vim.git)
-* [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim.git)
-* [FastFold](https://github.com/Konfekt/FastFold.git)
-* \![jshint.vim](https://github.com/walm/jshint.vim.git)
-* [lua.vim](https://github.com/vim-scripts/lua.vim.git)
-* \![lushtags](https://github.com/bitc/lushtags.git)
+* [dict.vim](https://github.com/iamcco/dict.vim)
+* [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
+* [FastFold](https://github.com/Konfekt/FastFold)
+* \![jshint.vim](https://github.com/walm/jshint.vim)
+* [lua.vim](https://github.com/vim-scripts/lua.vim)
+* \![lushtags](https://github.com/bitc/lushtags)
 * \![neco-ghc](https://github.com/eagletmt/neco-ghc)
-* \![neocomplete.vim](https://github.com/Shougo/neocomplete.vim.git)
-* [nerdcommenter](https://github.com/scrooloose/nerdcommenter.git)
-* [nerdtree](https://github.com/scrooloose/nerdtree.git)
-* \![omnisharp-vim](https://github.com/OmniSharp/omnisharp-vim.git)
-* [pydiction](https://github.com/rkulla/pydiction.git)
-* \![rainbow](https://github.com/luochen1990/rainbow.git)
-* [sessionman.vim](https://github.com/vim-scripts/sessionman.vim.git)
+* \![neocomplete.vim](https://github.com/Shougo/neocomplete.vim)
+* [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
+* [nerdtree](https://github.com/scrooloose/nerdtree)
+* \![omnisharp-vim](https://github.com/OmniSharp/omnisharp-vim)
+* [pydiction](https://github.com/rkulla/pydiction)
+* \![rainbow](https://github.com/luochen1990/rainbow)
+* [sessionman.vim](https://github.com/vim-scripts/sessionman.vim)
 * [ShaderHightLight](http://git.oschina.net/qiuchangjie/ShaderHighLight)
 * \*[sw-samuraj-vim-gradle](https://bitbucket.org/sw-samuraj/vim-gradle)
-* [syntastic](https://github.com/vim-syntastic/syntastic.git)
-* [tabular](https://github.com/godlygeek/tabular.git)
-* [tagbar](https://github.com/majutsushi/tagbar.git)
+* [syntastic](https://github.com/vim-syntastic/syntastic)
+* [tabular](https://github.com/godlygeek/tabular)
+* [tagbar](https://github.com/majutsushi/tagbar)
 * [TaskList](https://github.com/vim-scripts/TaskList.vim)
 * [ultisnips](https://github.com/SirVer/ultisnips)
-* [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes.git)
-* [vim-airline](https://github.com/vim-airline/vim-airline.git)
-* [vim-csharp](https://github.com/OrangeT/vim-csharp.git)
-* [vim-easygrep](https://github.com/dkprice/vim-easygrep.git)
-* [vim-fugitive](https://github.com/tpope/vim-fugitive.git)
-* ~~[vim-javacomplete2](https://github.com/artur-shaik/vim-javacomplete2.git)~~
-* [vim-javascript](https://github.com/pangloss/vim-javascript.git)
-* \+[vim-latex](https://github.com/vim-latex/vim-latex.git)
-* [vim-markdown](https://github.com/plasticboy/vim-markdown.git)
-* [vim-misc](https://github.com/xolox/vim-misc.git)
-* [vim-nodejs-complete](https://github.com/myhere/vim-nodejs-complete.git)
-* [vim-polyglot](https://github.com/sheerun/vim-polyglot.git)
-* [vim-repeat](https://github.com/tpope/vim-repeat.git)
-* [vim-rooter](https://github.com/airblade/vim-rooter.git)
-* [vim-snippets](https://github.com/honza/vim-snippets.git)
-* [vim-surround](https://github.com/tpope/vim-surround.git)
-* [vimwiki](https://github.com/vimwiki/vimwiki.git)
+* [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
+* [vim-airline](https://github.com/vim-airline/vim-airline)
+* [vim-csharp](https://github.com/OrangeT/vim-csharp)
+* [vim-dispatch](https://github.com/tpope/vim-dispatch)
+* [vim-easygrep](https://github.com/dkprice/vim-easygrep)
+* [vim-fugitive](https://github.com/tpope/vim-fugitive)
+* ~~[vim-javacomplete2](https://github.com/artur-shaik/vim-javacomplete2)~~
+* [vim-javascript](https://github.com/pangloss/vim-javascript)
+* \+[vim-latex](https://github.com/vim-latex/vim-latex)
+* [vim-markdown](https://github.com/plasticboy/vim-markdown)
+* [vim-misc](https://github.com/xolox/vim-misc)
+* [vim-nodejs-complete](https://github.com/myhere/vim-nodejs-complete)
+* [vim-polyglot](https://github.com/sheerun/vim-polyglot)
+* [vim-repeat](https://github.com/tpope/vim-repeat)
+* [vim-rooter](https://github.com/airblade/vim-rooter)
+* [vim-snippets](https://github.com/honza/vim-snippets)
+* [vim-surround](https://github.com/tpope/vim-surround)
+* [vimwiki](https://github.com/vimwiki/vimwiki)
 * [wmgraphviz.vim](https://github.com/wannesm/wmgraphviz.vim)
-* [xmledit](https://github.com/sukima/xmledit.git)
+* [xmledit](https://github.com/sukima/xmledit)
 
 ## Attention ##
 
@@ -86,23 +87,23 @@ With some changes I do it now can used normally under windows.
 I commit pull request to [wannesm](https://github.com/wannesm) and he just merged it into repo,
 so actually there is no edit in the plugin.
 
-### [vim-latex](https://github.com/vim-latex/vim-latex.git) ###
+### [vim-latex](https://github.com/vim-latex/vim-latex) ###
 
 All changes have been moved to vimrc file.
 So no change in code,
 just some templates I used.
 
-### [vim-fugitive](https://github.com/tpope/vim-fugitive.git) ###
+### [vim-fugitive](https://github.com/tpope/vim-fugitive) ###
 
 With unknown reason it can't works.
 for example,
 if use Gstatus,
 sometimes E484(can't open file),
 sometimes a empty file(.git/index err).
-Seems all plugin use Temp file([vim-javacomplete2](https://github.com/artur-shaik/vim-javacomplete2.git)) has this bug,
+Seems all plugin use Temp file([vim-javacomplete2](https://github.com/artur-shaik/vim-javacomplete2)) has this bug,
 maybe some errors in vim itself.
 
-### [clang-complete](https://github.com/Rip-Rip/clang_complete.git) ###
+### [clang-complete](https://github.com/Rip-Rip/clang_complete) ###
 
 Need to install clang fisrt and set a var to clang lib path.
 Not test because didn't write cpp for a long time.
