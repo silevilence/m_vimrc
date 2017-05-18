@@ -748,6 +748,8 @@ let g:EasyGrepIgnoreCase = 0 " not ignorecase
 let g:EasyGrepFilesToExclude = "*.bak, *~, cscope.*, *.a, *.o, *.pyc, *.bak, *.swp, *.svn, *.git"
 let g:EasyGrepReplaceWindowMode = 2
 let g:EasyGrepJumpToMatch = 0
+
+nnoremap <localleader>tl :Grep\ TODO<cr>
 " }}}
 
 " EditorConfig {{{
