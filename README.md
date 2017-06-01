@@ -12,7 +12,7 @@ This is just a backup.
 
 ## Plugins List ##
 
-**Update Time:** 2017-05-18
+**Update Time:** 2017-06-01
 
 *note:* Sort by name in initial commit,
 maybe sort by name after(may forget to sort after add a plugin).
@@ -25,6 +25,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 
 * [asyncrun.vim](https://github.com/skywind3000/asyncrun.vim)
 * \*[authorinfo](https://github.com/dantezhu/authorinfo)
+* [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 * [bufferhint](https://github.com/bsdelf/bufferhint)
 * [calendar.vim](https://github.com/itchyny/calendar.vim)
 * [clang-complete](https://github.com/Rip-Rip/clang_complete)
