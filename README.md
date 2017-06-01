@@ -27,7 +27,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * \*[authorinfo](https://github.com/dantezhu/authorinfo)
 * [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 * [bufferhint](https://github.com/bsdelf/bufferhint)
-* [calendar.vim](https://github.com/itchyny/calendar.vim)
+* ~~[calendar.vim](https://github.com/itchyny/calendar.vim)~~
 * [clang-complete](https://github.com/Rip-Rip/clang_complete)
 * \*[csExplorer](https://github.com/scwbin/csExplorer)
 * [csv.vim](https://github.com/chrisbra/csv.vim)
