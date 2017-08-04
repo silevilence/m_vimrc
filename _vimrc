@@ -205,7 +205,7 @@ set background=dark
 colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
-set guifont=Monaco:h10
+set guifont=Monaco:h11
 "������ɫģʽ������
 "if g:isWIN
     "set guifont=Monaco:h11
