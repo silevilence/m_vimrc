@@ -628,7 +628,7 @@ set completeopt-=preview
 " }}}
 
 " javacomplete2 {{{
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
+"autocmd FileType java setlocal omnifunc=javacomplete#Complete
 " }}}
 
 " bufferhint {{{
@@ -712,11 +712,12 @@ let g:clang_library_path = "D:/Program Files/LLVM/bin"
 " calendar.vim {{{
 "let g:calendar_google_calendar = 1
 "let g:calendar_google_task = 1
-nnoremap <leader>cal :Calendar
+"nnoremap <leader>cal :Calendar
 " }}}
 
 " vimwiki {{{
 let g:vimwiki_use_mouse = 1
+let g:vimwiki_use_calendar = 1
 let g:vimwiki_list = [{'path': 'D:/vimwiki/',
 \ 'path_html': 'D:/vimwiki/html/',
 \ 'html_header': 'D:/vimwiki/template/header.tpl',}]

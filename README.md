@@ -29,6 +29,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [autohotkey.vim](https://github.com/mmikeww/autohotkey.vim)
 * [bufferhint](https://github.com/bsdelf/bufferhint)
 * ~~[calendar.vim](https://github.com/itchyny/calendar.vim)~~
+* \*[calendar-vim](http://www.vim.org/scripts/script.php?script_id=52)
 * [clang-complete](https://github.com/Rip-Rip/clang_complete)
 * \*[csExplorer](https://github.com/scwbin/csExplorer)
 * [csv.vim](https://github.com/chrisbra/csv.vim)
