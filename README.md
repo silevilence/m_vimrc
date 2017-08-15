@@ -12,7 +12,7 @@ This is just a backup.
 
 ## Plugins List ##
 
-**Update Time:** 2017-08-04
+**Update Time:** 2017-08-15
 
 *note:* Sort by name in initial commit,
 maybe sort by name after(may forget to sort after add a plugin).
