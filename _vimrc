@@ -38,6 +38,7 @@ execute pathogen#infect()
 " Basic settings 2 {{{
 set sw=4
 set nu!
+set expandtab
 syntax enable
 syntax on
 set sessionoptions-=options
