@@ -708,6 +708,10 @@ let g:vim_markdown_no_extensions_in_markdown = 1
 let g:clang_library_path = "E:\\Program Files\\LLVM\\bin"
 " or path directly to the library file
 "let g:clang_library_path='/usr/lib64/libclang.so.3.8'
+
+" co-op with autopairs
+let g:AutoPairsMapCR = 0
+imap <silent><CR> <CR><Plug>AutoPairsReturn
 " }}}
 
 " calendar.vim {{{
