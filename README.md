@@ -12,7 +12,7 @@ This is just a backup.
 
 ## Plugins List ##
 
-**Update Time:** 2017-08-15
+**Update Time:** 2017-09-14
 
 *note:* Sort by name in initial commit,
 maybe sort by name after(may forget to sort after add a plugin).
@@ -28,8 +28,8 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 * [autohotkey.vim](https://github.com/mmikeww/autohotkey.vim)
 * [bufferhint](https://github.com/bsdelf/bufferhint)
-* ~~[calendar.vim](https://github.com/itchyny/calendar.vim)~~
 * \*[calendar-vim](http://www.vim.org/scripts/script.php?script_id=52)
+* ~~[calendar.vim](https://github.com/itchyny/calendar.vim)~~
 * [clang-complete](https://github.com/Rip-Rip/clang_complete)
 * \*[csExplorer](https://github.com/scwbin/csExplorer)
 * [csv.vim](https://github.com/chrisbra/csv.vim)
@@ -71,6 +71,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [vim-repeat](https://github.com/tpope/vim-repeat)
 * [vim-rooter](https://github.com/airblade/vim-rooter)
 * [vim-snippets](https://github.com/honza/vim-snippets)
+* [vim-speeddating](https://github.com/tpope/vim-speeddating)
 * [vim-surround](https://github.com/tpope/vim-surround)
 * [vimwiki](https://github.com/vimwiki/vimwiki)
 * [wmgraphviz.vim](https://github.com/wannesm/wmgraphviz.vim)
