@@ -38,7 +38,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
 * [emmet-vim](https://github.com/mattn/emmet-vim)
 * [FastFold](https://github.com/Konfekt/FastFold)
-* \![jshint.vim](https://github.com/walm/jshint.vim)
+* \!~~[jshint.vim](https://github.com/walm/jshint.vim)~~
 * [lua.vim](https://github.com/vim-scripts/lua.vim)
 * \![lushtags](https://github.com/bitc/lushtags)
 * \![neco-ghc](https://github.com/eagletmt/neco-ghc)
