@@ -602,7 +602,7 @@ let g:OmniSharp_selector_ui = 'ctrlp'  " Use ctrlp.vim
 let g:Omnisharp_start_server=0
 " }}}
 
-" syntastic settings {{{
+" syntastic {{{
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -612,6 +612,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ignore_files = ['\m\c\.tex$', '\m\c\.hs$', '\m\c\.[ch]\(pp\)?$']
+let g:syntastic_javascript_checkers = ['jshint']
 " }}}
 
 " ultisnips {{{
@@ -628,9 +629,9 @@ let g:UltiSnipsEditSplit="vertical"
 set completeopt-=preview
 " }}}
 
-" javacomplete2 {{{
+"" javacomplete2 {{{
 "autocmd FileType java setlocal omnifunc=javacomplete#Complete
-" }}}
+"" }}}
 
 " bufferhint {{{
 nnoremap <LocalLeader>bt :call bufferhint#Popup()<CR>
