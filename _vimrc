@@ -682,19 +682,19 @@ augroup asyncrun
 augroup END
 " }}}
 
-" vim-rooter {{{
-" directories and all files (default)
-let g:rooter_targets = '/,*'
+"" vim-rooter {{{
+"" directories and all files (default)
+"let g:rooter_targets = '/,*'
 
-" ignore directories; all files
-let g:rooter_targets = '*'
+"" ignore directories; all files
+"let g:rooter_targets = '*'
 
-" ignore directories; yaml files
-let g:rooter_targets = '*.yml,*.yaml'
+"" ignore directories; yaml files
+"let g:rooter_targets = '*.yml,*.yaml'
 
-" directories and yaml files
-let g:rooter_targets = '/,*.yml,*.yaml'
-" }}}
+"" directories and yaml files
+"let g:rooter_targets = '/,*.yml,*.yaml'
+"" }}}
 
 " vim-markdown {{{
 let g:vim_markdown_folding_disabled = 1
@@ -763,4 +763,13 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 "let g:EditorConfig_core_mode = 'external_command'
 let g:EditorConfig_exec_path = 'D:\Program Files\Chocolatey\bin'
 let g:EditorConfig_python_files_dir = 'D:\Program Files (x86)\Vim\vimfiles\bundle\editorconfig-vim\plugin\editorconfig-core-py'
+" }}}
+
+" emmet-vim {{{
+let g:user_emmet_install_global = 0
+augroup emmet_vim
+    autocmd!
+    autocmd FileType html,css EmmetInstall
+augroup END
+let g:user_emmet_mode='a'    "enable all function in all mode.
 " }}}

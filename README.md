@@ -12,7 +12,7 @@ This is just a backup.
 
 ## Plugins List ##
 
-**Update Time:** 2017-09-14
+**Update Time:** 2017-10-13
 
 *note:* Sort by name in initial commit,
 maybe sort by name after(may forget to sort after add a plugin).
@@ -36,6 +36,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 * [dict.vim](https://github.com/iamcco/dict.vim)
 * [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
+* [emmet-vim](https://github.com/mattn/emmet-vim)
 * [FastFold](https://github.com/Konfekt/FastFold)
 * \![jshint.vim](https://github.com/walm/jshint.vim)
 * [lua.vim](https://github.com/vim-scripts/lua.vim)
@@ -66,10 +67,10 @@ maybe sort by name after(may forget to sort after add a plugin).
 * \+[vim-latex](https://github.com/vim-latex/vim-latex)
 * [vim-markdown](https://github.com/plasticboy/vim-markdown)
 * [vim-misc](https://github.com/xolox/vim-misc)
-* [vim-nodejs-complete](https://github.com/myhere/vim-nodejs-complete)
+* ~~[vim-nodejs-complete](https://github.com/myhere/vim-nodejs-complete)~~
 * [vim-polyglot](https://github.com/sheerun/vim-polyglot)
 * [vim-repeat](https://github.com/tpope/vim-repeat)
-* [vim-rooter](https://github.com/airblade/vim-rooter)
+* ~~[vim-rooter](https://github.com/airblade/vim-rooter)~~
 * [vim-snippets](https://github.com/honza/vim-snippets)
 * [vim-speeddating](https://github.com/tpope/vim-speeddating)
 * [vim-surround](https://github.com/tpope/vim-surround)
