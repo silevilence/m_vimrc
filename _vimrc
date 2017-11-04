@@ -762,7 +762,7 @@ nnoremap <localleader>tl :Grep\ TODO<cr>
 " EditorConfig {{{
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 "let g:EditorConfig_core_mode = 'external_command'
-let g:EditorConfig_exec_path = 'D:\Program Files\Chocolatey\bin'
+"let g:EditorConfig_exec_path = 'D:\Program Files\Chocolatey\bin'
 let g:EditorConfig_python_files_dir = 'D:\Program Files (x86)\Vim\vimfiles\bundle\editorconfig-vim\plugin\editorconfig-core-py'
 " }}}
 
@@ -773,4 +773,13 @@ augroup emmet_vim
     autocmd FileType html,css EmmetInstall
 augroup END
 let g:user_emmet_mode='a'    "enable all function in all mode.
+" }}}
+
+" plantuml-syntax {{{
+augroup plantuml_syntax
+    autocmd!
+    autocmd FileType plantuml set makeprg=java\ -jar\ \"E:\\Program\ Files\\plantuml\\plantuml.jar\"\ %\ $*
+    autocmd FileType plantuml nnoremap <localleader>ll :make<CR>
+    autocmd FileType plantuml nnoremap <localleader>lv :!start %:p:r.png<CR>
+augroup END
 " }}}

@@ -46,6 +46,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
 * [nerdtree](https://github.com/scrooloose/nerdtree)
 * \!\+[omnisharp-vim](https://github.com/OmniSharp/omnisharp-vim)
+* [plantuml-syntax](https://github.com/aklt/plantuml-syntax)
 * [pydiction](https://github.com/rkulla/pydiction)
 * \![rainbow](https://github.com/luochen1990/rainbow)
 * [sessionman.vim](https://github.com/vim-scripts/sessionman.vim)
