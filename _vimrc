@@ -778,7 +778,7 @@ let g:user_emmet_mode='a'    "enable all function in all mode.
 " plantuml-syntax {{{
 augroup plantuml_syntax
     autocmd!
-    autocmd FileType plantuml set makeprg=java\ -jar\ \"E:\\Program\ Files\\plantuml\\plantuml.jar\"\ %\ $*
+    autocmd FileType plantuml set makeprg=java\ -jar\ \"E:\\Program\ Files\\plantuml\\plantuml.jar\"\ -charset\ UTF-8\ %\ $*
     autocmd FileType plantuml nnoremap <localleader>ll :make<CR>
     autocmd FileType plantuml nnoremap <localleader>lv :!start %:p:r.png<CR>
 augroup END
