@@ -363,7 +363,7 @@ let hs_allow_hash_operator = 1
 " Disable haskell-vim omnifunc
 let g:haskellmode_completion_ghc = 0
 augroup filetype_haskell
-    augroup!
+    autocmd!
     autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
     autocmd filetype haskell set ts=4 | set expandtab
 augroup END
