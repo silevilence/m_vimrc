@@ -12,7 +12,7 @@ This is just a backup.
 
 ## Plugins List ##
 
-**Update Time:** 2017-10-13
+**Update Time:** 2018-07-27
 
 *note:* Sort by name in initial commit,
 maybe sort by name after(may forget to sort after add a plugin).
@@ -46,7 +46,7 @@ maybe sort by name after(may forget to sort after add a plugin).
 * \![neocomplete.vim](https://github.com/Shougo/neocomplete.vim)
 * [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
 * [nerdtree](https://github.com/scrooloose/nerdtree)
-* \!\+[omnisharp-vim](https://github.com/OmniSharp/omnisharp-vim)
+* ~~\!\+[omnisharp-vim](https://github.com/OmniSharp/omnisharp-vim)~~
 * [plantuml-syntax](https://github.com/aklt/plantuml-syntax)
 * [pydiction](https://github.com/rkulla/pydiction)
 * \![rainbow](https://github.com/luochen1990/rainbow)
